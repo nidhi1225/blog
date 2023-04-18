@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Header from './Components/header/header'
+import Footer from './Components/footer/footer';
+import Desktopmain from './Components/main/desktopMain';
+import Mobilemain from './Components/main/mobileMain'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex flex-col justify-between h-screen">
+      <div className="header"><Header /></div>
+      <div className='max-lg:hidden'><Desktopmain /></div>
+      <div className='lg:hidden'><Mobilemain /></div>
+      <div className="footer"><Footer /></div>
     </div>
   );
 }
