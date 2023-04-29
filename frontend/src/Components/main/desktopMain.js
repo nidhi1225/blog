@@ -2,38 +2,23 @@ import React from "react";
 import './main.css'
 import Rightside from "./rightSideDesktop";
 import Desktopcard from "./postCardDesktop";
-import flower from "../../images/flower.jpg";
-import nature from "../../images/nature.jpg";
-import strawberry from "../../images/strawberry.jpg";
+import image from "../../images/image.jpg";
+import PostPage from "../post/post";
+import { useSelector } from "react-redux";
 
 export default function Desktopmain(){
-    var desktopData =[
-        {
-            imgaddress:flower,
-            title:'Some interesting fact about the color of flowers',
-            author:'Biswajit Saha',
-            date:'22/22/22',
-            tag:[]
-        },{
-            imgaddress:nature,
-            title:'We should always take lesson from nature to make our life beautiful',
-            author:'Surabhi Gupta',
-            date:'22/22/22',
-            tag:[]
-        },{
-            imgaddress:strawberry,
-            title:'Different way of eating strawberry, the luxurious fruit',
-            author:'Apurba Talukdar',
-            date:'22/22/22',
-            tag:[]
-        }
-    ]
+    const state = useSelector((state) => state);
+    console.log("store", state);
+    const desktopData = state.desktopData;
+    
     return(
         <div className="flex justify-between">
-            <div className="w-3/4">
+            <div className="w-3/4 leftbar">
+            {/* first page or home page content */}
+            <div>
                 <div>
-                    <img src="#" />
-                    <button>Tagname</button>
+                    <img src={image} />
+                    <button className="posttag">#Lifestyle</button>
                     <h1>Self-observation is the first step of inner unfolding</h1>
                     <p>Almost instantly the whole truth of the transaction seemed to rush upon her mind, and her wrath was inconceivably 
                         violent. She asked me a thousand questions in a breath; but, fortunately, was too vehement to attend to my 
@@ -46,9 +31,12 @@ export default function Desktopmain(){
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-around">{desktopData.map((item)=>{return(<Desktopcard postdata={item} />)})}</div>
+                <div className="flex justify-around flex-wrap">{desktopData.map((item)=>{return(<Desktopcard postdata={item} />)})}</div>
             </div>
-            <div><Rightside /></div>
+            {/* home page content end here */}
+            </div>
+            {/* right navbar */}
+            <div className="rightbar"><Rightside /></div>
         </div>
     )
 }

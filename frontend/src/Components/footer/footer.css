@@ -35,3 +35,10 @@ a{
     height: 35px;
     width: 25%;
 }
+.pagelink{
+    padding: 1%;
+    text-decoration: underline;
+}
+.copyright{
+    text-align: center;
+}

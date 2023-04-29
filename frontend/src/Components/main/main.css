@@ -1,3 +1,51 @@
 .desktopcard{
     width:30%;
+    /* max-height: 490px; */
+}
+.cardimg{
+    width: 100%;
+    height: 60%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.mobilecardimg{
+    width: 100%;
+    height: 100%;
+}
+.mobileimg{
+    min-width:90px;
+    height: 90px;
+    margin-right: 2%;
+}
+.mobilecard{
+    margin: 25px 10px 55px 10px;
+    padding: 3%;
+    box-shadow: 0 3px 12px -1px rgba(7,10,25,0.1), 0 22px 27px -30px rgba(7,10,25,0.1);
+}
+.mobilebutton{
+    background: #4B4870;
+    color: whitesmoke;
+    padding: 8px 25px;
+    justify-content: center;
+    border-radius: 20px
+}
+.tagbutton{
+    border-radius: 18px;
+    margin-right: 2%;
+    margin-bottom: 5%;
+    box-shadow: 0px 2px 6px rgba(75,72,112,0.15);
+    padding: 3% 5%;
+}
+.rightbar{
+    /* position: fixed;
+    right: 0; */
+    width: 25%;
+    padding: 5px;
+}
+.leftbar{
+    padding: 1%;
+}
+.rightsideBar-container{
+    position:sticky;
+    top:0;
 }

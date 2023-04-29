@@ -1,0 +1,56 @@
+.post{
+    padding: 1%;
+    box-shadow: 0px 2px 6px rgba(75,72,112,0.15);
+}
+.subheading{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 35px;
+}
+.posttag{
+    padding: 6px 10px;
+    border-radius: 18px;
+    box-shadow: 0px 2px 6px rgba(75,72,112,0.15);
+}
+.postimg{
+    margin: 0.1%;
+    width: 100%;
+}
+.noAccess{
+    border: solid grey 0.5px;
+    padding: 3%;
+    font-size: larger;
+    font-weight: 600;
+}
+.subscribepost{
+    background-color: #28374c;
+    padding: 3%;
+    text-align: center;
+    color: whitesmoke;
+}
+.subscribePostButton{
+    background-color: #e72c30;
+    color: whitesmoke;
+    height: 35px;
+    width: 20%;
+    margin: 2%;
+}
+.sharePost{
+    text-align: center;
+    margin: 3%;
+}
+.shareButton{
+    display: inline-flex;
+    padding: 0.5%;
+    margin: 1%;
+    color: whitesmoke;
+}
+.authordiv{
+    box-shadow: 0px 2px 6px rgba(75,72,112,0.15);
+    padding: 2%;
+}
+.authorimg{
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+}
