@@ -13,7 +13,7 @@ import Rightside from "../main/rightSideDesktop";
 export default function PostPage(){
     return(
         <div className="flex justify-between">
-        <div className="w-3/4 leftbar">
+        <div className="lg:w-3/4 leftbar">
         <div className="post">
             {/* heading div */}
             <div className="text-center">
@@ -21,8 +21,8 @@ export default function PostPage(){
                 <div className="subheading">
                     {/* left side author info */}
                     <div>
-                        <span className="p-0.5">By author name</span>
-                        <span className="p-0.5">date 22/22/22</span>
+                        <div className="p-0.5">By author name</div>
+                        <div className="p-0.5">date 22/22/22</div>
                     </div>
                     {/* right side tag */}
                     <div className="posttag">
@@ -84,7 +84,7 @@ export default function PostPage(){
         </div>
             </div>
             {/* right navbar */}
-            <div className="rightbar"><Rightside /></div>
+            <div className="rightbar max-lg:hidden"><Rightside /></div>
         </div>
     )
 }

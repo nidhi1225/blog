@@ -9,26 +9,13 @@ import Recentpost from "./recentpost";
 import TagList from "../header/tagsList";
 import Socialmedia from "./socialmedia";
 import Subscribe from "./subscribe";
-import flower from "../../images/flower.jpg";
-import nature from "../../images/nature.jpg";
-import strawberry from "../../images/strawberry.jpg";
 import './footer.css';
+import { useSelector } from "react-redux";
 
 export default function Footer(){
-    var tagArray = ['food','lifestyle','finance','sports','education'];
-    let post=[{
-        title : 'Different way of eating strawberry, the luxurious fruit',
-        imgaddress: strawberry ,
-        author: 'Biswajit Saha'
-    },{
-        title : 'Some interesting fact about the color of flowers',
-        imgaddress: flower ,
-        author: 'Surabhi Gupta'
-    },{
-        title : 'We should always take lesson from nature to make our life beautiful',
-        imgaddress: nature ,
-        author: 'Apurba Talukdar'
-    }]
+    const state = useSelector((state) => state);
+    var tagArray = state.tagArray;
+    let post= state.post;
     return(
         <div className="body justify-center">
             <div className="lg:flex justify-evenly px-2.5">

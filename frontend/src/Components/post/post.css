@@ -52,5 +52,5 @@
 .authorimg{
     border-radius: 50%;
     height: 90px;
-    width: 90px;
+    max-width: 90px;
 }

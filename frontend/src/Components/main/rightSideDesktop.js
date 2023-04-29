@@ -2,35 +2,27 @@ import React from "react";
 import Recentpost from "../footer/recentpost"
 import TagList from "../header/tagsList";
 import Socialmedia from "../footer/socialmedia";
-import flower from "../../images/flower.jpg";
-import nature from "../../images/nature.jpg";
-import strawberry from "../../images/strawberry.jpg";
+import { useSelector } from "react-redux";
 
 export default function Rightside(){
-    var tagArray = ['food','lifestyle','finance','sports','education'];
-    let post=[{
-        title : 'Different way of eating strawberry, the luxurious fruit',
-        imgaddress: strawberry ,
-        author: 'Biswajit Saha'
-    },{
-        title : 'Some interesting fact about the color of flowers',
-        imgaddress: flower ,
-        author: 'Surabhi Gupta'
-    },{
-        title : 'We should always take lesson from nature to make our life beautiful',
-        imgaddress: nature ,
-        author: 'Apurba Talukdar'
-    }]
+    const state = useSelector((state) => state);
+    // data of tag button
+    var tagArray = state.tagArray;
+    // data of recent post
+    let post= state.post;
     return(
         <div className="rightsideBar-container">
+        {/* recent post */}
         <div>
             <h4>Recent post</h4>
             {post.map((item)=>{return(<Recentpost postdata={item} />)})}
         </div>
+        {/* tag buttons */}
         <div>
             <h4>Tag cloud</h4>
             <TagList tagItem={tagArray} />
         </div>
+        {/* social media icon */}
         <div>
             <h4>Follow us!</h4>
             <Socialmedia />
