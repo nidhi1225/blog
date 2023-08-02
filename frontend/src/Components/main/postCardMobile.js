@@ -5,7 +5,7 @@ export default function Mobilecard(props){
     return(
         <div className="mobilecard relative">
         <div className="flex">
-            <div className="mobileimg"><img src={props.postdata.imgaddress} className="mobilecardimg"/></div>
+            <div className="mobileimg"><img src={props.postdata.imgaddress} className="mobilecardimg" alt="postimg"/></div>
             <div>
                 <h3>{props.postdata.title}</h3>
             </div>

@@ -3,7 +3,7 @@ export default function Recentpost(props){
     
     return(
         <div className="flex pt-2.5">
-            <div><img src={props.postdata.imgaddress} className="footerimg"/></div>
+            <div><img src={props.postdata.imgaddress} className="footerimg" alt="postimg"/></div>
             <div>
                 <div>
                     {props.postdata.title}

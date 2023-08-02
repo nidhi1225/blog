@@ -12,13 +12,13 @@ export default function Desktopmain(){
     
     return(
         <div className="flex justify-between">
-            <div className="w-3/4 leftbar">
+            <main className="w-3/4 leftbar">
             {/* first page or home page content */}
             <div>
                 {/* default post */}
                 <div>
                     {/* post image */}
-                    <img src={image} />
+                    <img src={image} alt="trial pic"/>
                     {/* post tag */}
                     <button className="posttag">#Lifestyle</button>
                     {/* post content */}
@@ -28,7 +28,7 @@ export default function Desktopmain(){
                         embarrassment, which must otherwise have betrayed my knowledge of...</p>
                     {/* author details */}
                     <div className="authorDetails flex">
-                        <img src="authorimage" />
+                        <img src="authorimage" alt="trial pic"/>
                         <div>
                             <div>author name</div>
                             <div>publish date</div>
@@ -40,9 +40,9 @@ export default function Desktopmain(){
                 <div className="flex justify-around flex-wrap">{desktopData.map((item)=>{return(<Desktopcard postdata={item} />)})}</div>
             </div>
             {/* home page content end here */}
-            </div>
+            </main>
             {/* right navbar */}
-            <div className="rightbar"><Rightside /></div>
+            <aside className="rightbar"><Rightside /></aside>
         </div>
     )
 }

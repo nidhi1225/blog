@@ -33,7 +33,7 @@ export default function PostPage(){
             {/* heading div closed */}
             {/* post content div */}
             <div>
-                <img src={nature} alt="post image" className="postimg"/>
+                <img src={nature} alt="postImage" className="postimg"/>
                 <p>
                     Donec eu ultricies turpis. Curabitur rutrum ipsum vitae lorem convallis dapibus. In nec lacus eu diam dignissim 
                     rhoncus. Duis viverra sagittis sollicitudin. Morbi quis nisl dolor. Fusce ac mi at eros mollis ullamcorper.
@@ -52,7 +52,7 @@ export default function PostPage(){
             <div className="subscribepost">
                 <h3>This post is for subscribers only</h3>
                 <button className="subscribePostButton">Subscribe Now</button>
-                <p><sub>Already have an account?<a href="" style={{color: "#e72c30"}} > Sign in</a></sub></p>
+                <p><sub>Already have an account?<a href="itsEmpty" style={{color: "#e72c30"}} > Sign in</a></sub></p>
             </div>
             {/* share post */}
             <div className="sharePost">
@@ -68,7 +68,7 @@ export default function PostPage(){
             </div>
             {/* about author */}
             <div className="flex authordiv">
-                <div><img src={surabhi} alt="author image"  className="authorimg"/></div>
+                <div><img src={surabhi} alt="authorImage"  className="authorimg"/></div>
                 <div>
                     <h6>Surabhi Gupta</h6>
                     <p>Developer at GBJ solution. I love to travel, make new friends. I prefer tea over coffee.</p>

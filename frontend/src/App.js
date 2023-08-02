@@ -3,8 +3,7 @@ import './App.css';
 import {
 	BrowserRouter as Router,
 	Routes,
-	Route,
-	Link
+	Route
 } from 'react-router-dom';
 import Header from './Components/header/header'
 import Footer from './Components/footer/footer';
@@ -23,7 +22,7 @@ function App() {
     <Provider store={store}>
     <Router>
       <div className="App flex flex-col justify-between h-screen">
-        <div className="header"><Header /></div>
+        <header><Header /></header>
         <Routes>
           <Route exact path='/aboutus' element={< Aboutus />}></Route>
           <Route exact path='/contactus' element={< Contactus />}></Route>
@@ -32,7 +31,7 @@ function App() {
           <Route exact path='/' element={<><div className='max-lg:hidden'><Desktopmain /></div><div className='lg:hidden'><Mobilemain /></div></>}></Route>
           <Route exact path='/post' element={< PostPage />}></Route>
         </Routes>
-        <div className="footer"><Footer /></div>
+        <footer><Footer /></footer>
       </div>
     </Router>
     </Provider>
